@@ -1,0 +1,133 @@
+.navbar {
+  background-color: rgba(255, 255, 255, 0); /* Transparent background */
+  backdrop-filter: blur(0px); /* Blurred effect */
+  position: fixed;
+  width: 100%; /* Adjusted to 100% to span the entire width */
+  height: 60px;
+  font-size: 13px;
+  top: 0;
+  left: 0; /* Ensure it starts from the left edge */
+  z-index: 1000; /* Ensure it's above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjusted padding to ensure proper spacing */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Drop shadow for depth */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background when scrolled */
+  backdrop-filter: blur(5px); /* Blur effect when scrolled */
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin-right: 20px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.navbar-menu ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu li {
+  margin: 0 30px;
+  list-style: none;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white; /* Menu links color white */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.navbar.scrolled .navbar-menu li a {
+  color: white; /* Keep menu links color white when scrolled */
+}
+
+
+
+.dnld_btn {
+  padding: 8px 14px;
+  font-size: 12px;
+  border-radius: 20px ;
+  border: 1px solid black;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  color: white; /* Default color for menu icon */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.navbar.scrolled .menu-icon {
+  color: rgb(255, 255, 255); /* Color for menu icon when navbar is scrolled */
+}
+
+.menu-icon svg {
+  width: 25px;
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 845px) {
+  .navbar-menu {
+    display: none; /* Hide the menu links by default */
+    flex-direction: column; /* Stack menu items vertically */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blurred effect */
+    width: 100%;
+    top: 80px; /* Adjust based on navbar height */
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Drop shadow for depth */
+    transform: translateY(-100%); /* Move menu off-screen initially */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .navbar-menu.active {
+    transform: translateY(0); /* Bring menu into view */
+    display: flex; /* Show the menu links */
+    justify-content: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+    flex-direction: column; /* Stack menu items in columns */
+  }
+
+  .navbar.scrolled .navbar-menu li a {
+    color: rgb(0, 0, 0); 
+  }
+
+  .navbar-menu li a {
+    color: rgb(0, 0, 0); 
+  }
+  
+  .menu-icon {
+    display: block; /* Show menu icon */
+    margin-right: 35px;
+    color: white; /* Adjust spacing */
+  }
+
+  
+  .navbar-menu ul {
+    padding: 0;
+    margin: 20px 50px 0 0;
+    display: block; 
+    text-align: center; /* Adjust margin as needed */
+  }
+  
+  .navbar-menu li {
+    margin: 25px 0; /* Adjust margin as needed */
+  }
+}
