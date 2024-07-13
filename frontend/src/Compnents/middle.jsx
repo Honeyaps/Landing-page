@@ -4,6 +4,8 @@ import middleimg2 from "./middleimg2.json";
 import Lottie from "lottie-react";
 
 import "./style.css";
+import { IoCheckmark } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Middle() {
   return (
@@ -132,40 +134,118 @@ export default function Middle() {
       </div>
 
       {/* pricing */}    
-      <div className="middle_body7">
+     
+
+        <div className="middle_body7">
         <h1>PRICING</h1>
         <br />
         <br />
 
         <div class="pricing_sec">
             <div className="pricing_box">
-                <img src="p1.avif" alt="" />
+                <img src="p1.png" alt="" />
                 
                 <h3>Free</h3>
-                <p>Perfect for developers who need a simple platform.</p>
-                <h2><sup>$</sup>0<sub>/month</sub></h2>
+                <p className="amount"><sup>$</sup>0<sub>/month</sub></p>
                 <span>Forever</span>
                 <br/>
                 <button>Get started</button>
                 <div className="list">
-                <p>Host open source projects</p>
-                <p>Host unlimited users</p>
-                <p>Get unlimited support</p>
-                <p>Unlimited downloads</p>
-                <p>Flexible project managment features</p>
-                <p>24/7 support</p>
-                <p>Community Support</p>
-                <p>Blazing fast cloud developers</p>
-                <p>Spark copilot access</p>
-                <p>Spark codespace access</p>
-                <p>Code of Conduct</p>
-                <p>Darft pull request</p>
+                <p><IoCheckmark className="checkmark"/> Host open source projects</p>
+                <p><IoCheckmark className="checkmark"/> Host unlimited users</p>
+                <p><IoCheckmark className="checkmark"/> Get unlimited support</p>
+                <p><IoCheckmark className="checkmark"/> Unlimited downloads</p>
+                <p><IoCheckmark className="checkmark"/> Flexible project managment</p>
+                <p><RxCross2 /> 24/7 support</p>
+                <p><RxCross2 /> Community Support</p>
+                <p><RxCross2 /> Blazing fast cloud developers</p>
+                <p><RxCross2 /> Spark copilot access</p>
+                <p><RxCross2 /> Spark codespace access</p>
+                <p><RxCross2 /> Code of Conduct</p>
+                <p><RxCross2 /> Darft pull request</p>
+                </div>
+            </div>
+            <div className="pricing_box">
+                <img src="p2.png" alt="" />
+                
+                <h3>Standard</h3>
+                <p className="amount"><sup>$</sup>7<sub>/month</sub></p>
+                <span>/per year</span>
+                <br/>
+                <button>Get started</button>
+                <div className="list">
+                <p><IoCheckmark className="checkmark"/> Host open source projects</p>
+                <p><IoCheckmark className="checkmark"/> Host unlimited users</p>
+                <p><IoCheckmark className="checkmark"/> Get unlimited support</p>
+                <p><IoCheckmark className="checkmark"/> Unlimited downloads</p>
+                <p><IoCheckmark className="checkmark"/> Flexible project managment</p>
+                <p><IoCheckmark className="checkmark"/> 24/7 support</p>
+                <p><IoCheckmark className="checkmark"/> Community Support</p>
+                <p><RxCross2 /> Blazing fast cloud developers</p>
+                <p><RxCross2 /> Spark copilot access</p>
+                <p><RxCross2 /> Spark codespace access</p>
+                <p><RxCross2 /> Code of Conduct</p>
+                <p><RxCross2 /> Darft pull request</p>
+                </div>
+            </div>
+            <div className="pricing_box">
+                <img src="p3.png" alt="" />
+                
+                <h3>Premium</h3>
+                <p className="amount"><sup>$</sup>19<sub>/month</sub></p>
+                <span>/per year</span>
+                <br/>
+                <button>Get started</button>
+                <div className="list">
+                <p><IoCheckmark className="checkmark"/> Host open source projects</p>
+                <p><IoCheckmark className="checkmark"/> Host unlimited users</p>
+                <p><IoCheckmark className="checkmark"/> Get unlimited support</p>
+                <p><IoCheckmark className="checkmark"/> Unlimited downloads</p>
+                <p><IoCheckmark className="checkmark"/> Flexible project managment</p>
+                <p><IoCheckmark className="checkmark"/> 24/7 support</p>
+                <p><IoCheckmark className="checkmark"/> Community Support</p>
+                <p><IoCheckmark className="checkmark"/> Blazing fast cloud developers</p>
+                <p><IoCheckmark className="checkmark"/> Spark copilot access</p>
+                <p><IoCheckmark className="checkmark"/> Spark codespace access</p>
+                <p><IoCheckmark className="checkmark"/> Code of Conduct</p>
+                <p><IoCheckmark className="checkmark"/> Darft pull request</p>
                 </div>
             </div>
         </div>
 
         
       </div>
+
+      {/* footer */}
+      <footer className="footer">
+        <div className="footer_content">
+          <div className="footer_section about">
+            <h3>About Us</h3>
+            <p>
+              We are committed to providing the best service and delivering exceptional value to our customers.
+            </p>
+          </div>
+          <div className="footer_section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+          <div className="footer_section social">
+            <h3>Follow Us</h3>
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div className="footer_bottom">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }

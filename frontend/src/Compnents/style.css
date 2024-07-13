@@ -1,14 +1,6 @@
 body {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    42deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 6%,
-    rgba(19, 4, 27, 1) 19%,
-    rgba(4, 1, 104, 1) 60%,
-    rgba(123, 8, 186, 1) 96%,
-    rgba(139, 29, 200, 1) 100%
-  );
+  background: rgb(0,0,0);
+background: linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(25,1,39,1) 47%, rgba(40,2,62,1) 65%, rgba(81,5,123,1) 100%, rgba(123,8,186,1) 100%, rgba(139,29,200,1) 100%);
   background-repeat: no-repeat;
 }
 
@@ -53,20 +45,12 @@ body {
   display: inline-block;
   font-size: 14px;
   margin: 0px 10px;
-  cursor: poiner;
+  cursor: pointer;
   font-weight: 600;
 }
 
 .home_btn:hover {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    42deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(19, 4, 27, 1) 0%,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(123, 8, 186, 1) 96%,
-    rgba(139, 29, 200, 1) 100%
-  );
+  background-color: white;
   color: rgb(0, 0, 0);
   transition: 0.2s ease-in-out;
 }
@@ -305,8 +289,6 @@ body {
   color: rgb(255, 54, 54);
 }
 
-/* pricing */
-
 .middle_body7 {
   display: flex;
   flex-direction: column;
@@ -322,3 +304,199 @@ body {
   padding: 0 20px;
 } 
 
+.pricing_sec {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.pricing_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(0px); 
+  padding: 20px 80px; 
+}
+
+.pricing_box img {
+  width: 200px;
+  height: 200px;
+}
+
+.pricing_box h3 {
+  font-weight: 200;
+  font-size: 40px;
+}
+
+.pricing_box p {
+  font-weight: 100;
+  font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.pricing_box .list {
+  text-align: start;
+  margin-left: 10%;
+}
+
+.pricing_box .amount {
+  font-weight: 100; 
+  font-size: 40px;
+  margin-top: 0px;
+}
+
+.pricing_box .amount sup,
+.pricing_box .amount sub {
+  font-size: 15px;
+}
+
+.pricing_box button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.pricing_box button:hover{
+  background-color: #707070;
+  color: #fff;
+}
+
+.checkmark {
+  color: rgb(0, 255, 0);
+}
+
+/* Responsive Styles */
+@media (max-width: 1330px) {
+  .pricing_sec {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing_box {
+    width: 80%;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .middle_body7 h1 {
+    font-size: 30px;
+  }
+
+  .pricing_box {
+    width: 90%;
+    padding: 20px 20px;
+  }
+
+  .pricing_box h3 {
+    font-size: 30px;
+  }
+
+  .pricing_box .amount {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .middle_body7 {
+    padding: 0% 5%;
+  }
+
+  .pricing_box {
+    width: 100%;
+    padding: 10px 10px;
+  }
+
+  .pricing_box h3 {
+    font-size: 24px;
+  }
+
+  .pricing_box .amount {
+    font-size: 24px;
+  }
+
+  .pricing_box button {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+
+/* Footer styles */
+.footer {
+  margin-top: 5%;
+  background-color: #171717;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer_section {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+}
+
+.footer_section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer_section p, .footer_section ul, .footer_section a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer_section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_section ul li {
+  margin-bottom: 10px;
+  
+}
+
+.footer_section a:hover {
+  color: #fff;
+}
+
+.footer_section .social a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ccc;
+}
+
+.footer_section .social a:hover {
+  color: #fff;
+}
+
+.footer_bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 11px;
+  color: darkgray;
+}
