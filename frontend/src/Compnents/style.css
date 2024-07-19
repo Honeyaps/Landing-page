@@ -435,13 +435,16 @@ background: linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(25,1
 
 /* Footer styles */
 .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 5%;
-  background-color: #171717;
   color: #fff;
   padding: 20px 0;
   text-align: center;
   font-family: "Ubuntu", sans-serif;
+  backdrop-filter: blur(4px); /* Adjust the blur amount as needed */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
 }
+
 
 .footer_content {
   display: flex;
@@ -483,10 +486,11 @@ background: linear-gradient(42deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(25,1
   color: #fff;
 }
 
-.footer_section .social a {
-  display: inline-block;
+
+
+.social a{
+  font-size: 29px;
   margin-right: 10px;
-  color: #ccc;
 }
 
 .footer_section .social a:hover {

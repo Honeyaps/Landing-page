@@ -2,10 +2,13 @@ import React from "react";
 import middleimg from "./middleimg.json";
 import middleimg2 from "./middleimg2.json";
 import Lottie from "lottie-react";
-
 import "./style.css";
 import { IoCheckmark } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa6";
 
 export default function Middle() {
   return (
@@ -226,7 +229,7 @@ export default function Middle() {
             </p>
           </div>
           <div className="footer_section links">
-            <h3>Quick Links</h3>
+            <h3>Help</h3>
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#services">Services</a></li>
@@ -236,10 +239,10 @@ export default function Middle() {
           </div>
           <div className="footer_section social">
             <h3>Follow Us</h3>
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#"><FaFacebookSquare /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaGithubSquare /></a>
+            <a href="#"><FaDiscord /></a>
           </div>
         </div>
         <div className="footer_bottom">
